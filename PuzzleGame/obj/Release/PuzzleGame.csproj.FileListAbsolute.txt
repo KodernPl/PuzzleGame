@@ -23,3 +23,9 @@ J:\PRG\cpp\vs_workspace\WPF\PuzzleGame\PuzzleGame\obj\Release\PuzzleGame.Propert
 J:\PRG\cpp\vs_workspace\WPF\PuzzleGame\PuzzleGame\obj\Release\PuzzleGame.csproj.GenerateResource.Cache
 J:\PRG\cpp\vs_workspace\WPF\PuzzleGame\PuzzleGame\obj\Release\PageSwitcher.baml
 J:\PRG\cpp\vs_workspace\WPF\PuzzleGame\PuzzleGame\obj\Release\PageSwitcher.g.cs
+J:\PRG\cpp\vs_workspace\WPF\PuzzleGame\PuzzleGame\obj\Release\Menu\GameOver.baml
+J:\PRG\cpp\vs_workspace\WPF\PuzzleGame\PuzzleGame\obj\Release\Menu\Gameplay.baml
+J:\PRG\cpp\vs_workspace\WPF\PuzzleGame\PuzzleGame\obj\Release\Menu\MainMenu.baml
+J:\PRG\cpp\vs_workspace\WPF\PuzzleGame\PuzzleGame\obj\Release\Menu\GameOver.g.cs
+J:\PRG\cpp\vs_workspace\WPF\PuzzleGame\PuzzleGame\obj\Release\Menu\Gameplay.g.cs
+J:\PRG\cpp\vs_workspace\WPF\PuzzleGame\PuzzleGame\obj\Release\Menu\MainMenu.g.cs
