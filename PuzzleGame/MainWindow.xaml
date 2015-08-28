@@ -1,0 +1,19 @@
+﻿<Window x:Class="PuzzleGame.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525"
+        KeyDown="Window_KeyDown">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="80*"/>
+            <ColumnDefinition Width="437*"/>
+        </Grid.ColumnDefinitions>
+        <Canvas x:Name="canvas" HorizontalAlignment="Left" Height="250" Margin="34,40,0,0" VerticalAlignment="Top" Width="250" Background="White" Grid.Column="1"/>
+        <Label x:Name="labelInfo" HorizontalAlignment="Left" VerticalAlignment="Top" Width="462" Margin="19,-1,0,0" Grid.ColumnSpan="2"/>
+        <Button x:Name="buttonSolve" Content="Solve&#xD;&#xA;" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="0,77,0,0" Click="Button_Click"/>
+        <Label x:Name="labelTime" Content="Time: 0" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,283,0,0"/>
+        <Label x:Name="labelMoves" Content="Moves: 0" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="1,257,0,0"/>
+        <Button x:Name="buttonNewPuzzle" Content="Button" HorizontalAlignment="Left" Margin="0,186,0,0" VerticalAlignment="Top" Width="75" Click="buttonNewPuzzle_Click"/>
+
+    </Grid>
+</Window>

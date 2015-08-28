@@ -1,0 +1,13 @@
+J:\PRG\cpp\vs_workspace\WPF\Fifteen_puzzle\Fifteen_puzzle\bin\Debug\Fifteen_puzzle.exe
+J:\PRG\cpp\vs_workspace\WPF\Fifteen_puzzle\Fifteen_puzzle\bin\Debug\Fifteen_puzzle.pdb
+J:\PRG\cpp\vs_workspace\WPF\Fifteen_puzzle\Fifteen_puzzle\obj\Debug\Fifteen_puzzle.csprojResolveAssemblyReference.cache
+J:\PRG\cpp\vs_workspace\WPF\Fifteen_puzzle\Fifteen_puzzle\obj\Debug\MainWindow.baml
+J:\PRG\cpp\vs_workspace\WPF\Fifteen_puzzle\Fifteen_puzzle\obj\Debug\MainWindow.g.cs
+J:\PRG\cpp\vs_workspace\WPF\Fifteen_puzzle\Fifteen_puzzle\obj\Debug\App.g.cs
+J:\PRG\cpp\vs_workspace\WPF\Fifteen_puzzle\Fifteen_puzzle\obj\Debug\Fifteen_puzzle_MarkupCompile.cache
+J:\PRG\cpp\vs_workspace\WPF\Fifteen_puzzle\Fifteen_puzzle\obj\Debug\Fifteen_puzzle.g.resources
+J:\PRG\cpp\vs_workspace\WPF\Fifteen_puzzle\Fifteen_puzzle\obj\Debug\Fifteen_puzzle.Properties.Resources.resources
+J:\PRG\cpp\vs_workspace\WPF\Fifteen_puzzle\Fifteen_puzzle\obj\Debug\Fifteen_puzzle.csproj.GenerateResource.Cache
+J:\PRG\cpp\vs_workspace\WPF\Fifteen_puzzle\Fifteen_puzzle\obj\Debug\Fifteen_puzzle.exe
+J:\PRG\cpp\vs_workspace\WPF\Fifteen_puzzle\Fifteen_puzzle\obj\Debug\Fifteen_puzzle.pdb
+J:\PRG\cpp\vs_workspace\WPF\Fifteen_puzzle\Fifteen_puzzle\bin\Debug\Fifteen_puzzle.exe.config
