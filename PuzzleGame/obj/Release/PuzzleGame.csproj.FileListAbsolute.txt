@@ -16,10 +16,10 @@ J:\PRG\cpp\vs_workspace\WPF\PuzzleGame\PuzzleGame\obj\Release\PuzzleGame.pdb
 J:\PRG\cpp\vs_workspace\WPF\PuzzleGame\PuzzleGame\bin\Release\PuzzleGame.exe
 J:\PRG\cpp\vs_workspace\WPF\PuzzleGame\PuzzleGame\bin\Release\PuzzleGame.pdb
 J:\PRG\cpp\vs_workspace\WPF\PuzzleGame\PuzzleGame\obj\Release\PuzzleGame.csprojResolveAssemblyReference.cache
-J:\PRG\cpp\vs_workspace\WPF\PuzzleGame\PuzzleGame\obj\Release\MainWindow.baml
-J:\PRG\cpp\vs_workspace\WPF\PuzzleGame\PuzzleGame\obj\Release\MainWindow.g.cs
 J:\PRG\cpp\vs_workspace\WPF\PuzzleGame\PuzzleGame\obj\Release\App.g.cs
 J:\PRG\cpp\vs_workspace\WPF\PuzzleGame\PuzzleGame\obj\Release\PuzzleGame_MarkupCompile.cache
 J:\PRG\cpp\vs_workspace\WPF\PuzzleGame\PuzzleGame\obj\Release\PuzzleGame.g.resources
 J:\PRG\cpp\vs_workspace\WPF\PuzzleGame\PuzzleGame\obj\Release\PuzzleGame.Properties.Resources.resources
 J:\PRG\cpp\vs_workspace\WPF\PuzzleGame\PuzzleGame\obj\Release\PuzzleGame.csproj.GenerateResource.Cache
+J:\PRG\cpp\vs_workspace\WPF\PuzzleGame\PuzzleGame\obj\Release\PageSwitcher.baml
+J:\PRG\cpp\vs_workspace\WPF\PuzzleGame\PuzzleGame\obj\Release\PageSwitcher.g.cs

@@ -18,7 +18,7 @@ namespace PuzzleGame
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class PageSwitcher : Window
     {
         Game game;
         string solution = "";
@@ -30,7 +30,7 @@ namespace PuzzleGame
         System.Windows.Threading.DispatcherTimer dispatcherTimer;
         System.Windows.Threading.DispatcherTimer timererek;
 
-        public MainWindow()
+        public PageSwitcher()
         {
             InitializeComponent();
             game = new Game(INITIAL_GRID, INITIAL_GRID);
