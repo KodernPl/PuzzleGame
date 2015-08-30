@@ -17,6 +17,7 @@ namespace PuzzleGame
         int moves;
         int time;
         Puzzle puzzle;
+        bool isSolved = false;
 
         #endregion private Fields
 
@@ -27,6 +28,13 @@ namespace PuzzleGame
         //  public Properties
         //
         //------------------------------------------------------
+
+        public bool IsSolved
+        {
+            get { return isSolved; }
+            set { isSolved = value; }
+        }
+
         public int Moves
         {
             get { return moves; }

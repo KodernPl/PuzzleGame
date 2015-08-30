@@ -4,19 +4,18 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" 
-              d:DesignHeight="350" d:DesignWidth="525"
-             KeyDown="Window_KeyDown">
-        <Grid>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="80*"/>
-                <ColumnDefinition Width="437*"/>
-            </Grid.ColumnDefinitions>
-            <Canvas x:Name="canvas" HorizontalAlignment="Left" Height="250" Margin="34,40,0,0" VerticalAlignment="Top" Width="250" Background="White" Grid.Column="1"/>
-            <Label x:Name="labelInfo" HorizontalAlignment="Left" VerticalAlignment="Top" Width="462" Margin="19,-1,0,0" Grid.ColumnSpan="2"/>
-            <Button x:Name="buttonSolve" Content="Solve&#xD;&#xA;" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="0,77,0,0" Click="Button_Click"/>
-            <Label x:Name="labelTime" Content="Time: 0" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,283,0,0"/>
-            <Label x:Name="labelMoves" Content="Moves: 0" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="1,257,0,0"/>
-            <Button x:Name="buttonNewPuzzle" Content="Button" HorizontalAlignment="Left" Margin="0,186,0,0" VerticalAlignment="Top" Width="75" Click="buttonNewPuzzle_Click"/>
+              d:DesignHeight="470" d:DesignWidth="450"
+             KeyDown="Window_KeyDown"
+             Focusable="True"
+             >
+    <Grid Margin="0,0,10,0">
+       
+        <Canvas x:Name="canvas" Margin="68,69,72,101" Height="300"/>
+        <Label x:Name="labelInfo" HorizontalAlignment="Left" VerticalAlignment="Top" Width="462" Margin="19,-1,0,0" Grid.ColumnSpan="2"/>
+        <Button x:Name="buttonSolve" Style="{DynamicResource RoundedButton}" Background="#66FF00FF" Foreground="White" FontFamily="Showcard Gothic" FontSize="16" Content="Solve" Margin="164,0,0,392" Click="Button_Click" Width="100" Height="34" VerticalAlignment="Bottom" HorizontalAlignment="Left"/>
+        <Button x:Name="buttonNewPuzzle" Style="{DynamicResource RoundedButton}" Background="#66FF00FF" Foreground="White" FontFamily="Showcard Gothic" FontSize="16" Content="New"  Margin="60,0,0,392"  Width="100" Click="buttonNewPuzzle_Click" Height="34" VerticalAlignment="Bottom" HorizontalAlignment="Left"/>
+        <Button x:Name="btnMenu" Style="{DynamicResource RoundedButton}" Background="#66FF00FF" Foreground="White" FontFamily="Showcard Gothic" FontSize="16" Content="Menu"  Width="100" Height="34" Margin="268,0,0,392" Click="btnMenu_Click" VerticalAlignment="Bottom" HorizontalAlignment="Left"/>
+        <Label HorizontalContentAlignment="Center" Content="Use keyboard arrows to move" Margin="0,389,0,0" Background="#33000000" Foreground="White" FontSize="16" Height="31" VerticalAlignment="Bottom"/>
 
-        </Grid>
- </UserControl>
+    </Grid>
+</UserControl>

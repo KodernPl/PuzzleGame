@@ -360,7 +360,14 @@ namespace PuzzleGame
 
             //Add the move string from solve_2x2()
             move += this.Solve2x2();
-            
+
+            Puzzle newPuzzle = this.Clone();
+            newPuzzle.UpdatePuzzle(move);
+            if (!newPuzzle.CheckSolvedAll())
+            {
+                //add final string
+                move += "drul";
+            }
             return move;
         }
 
@@ -611,15 +618,32 @@ namespace PuzzleGame
         private void Randomize()
         {
             Random rnd = new Random();
+            int number = 15;
 
-            for (int idx = 0; idx < 15; idx++)
+            if (this.Width * this.Height > 25)
+            {
+                number = 35;
+            }
+            if (this.Width * this.Height > 35)
+            {
+                number = 45;
+            }
+            if (this.Width * this.Height > 40)
+            {
+                number = 45;
+            }
+            if (this.Width * this.Height > 48)
+            {
+                number = 55;
+            }
+            for (int idx = 0; idx < number; idx++)
             {
                 List<string> directions = new List<string>();
                 int[] rpuzPos = this.CurrentPosition(0, 0);
-                //if (rpuzPos[0] != 0)
-                //{
-                //    directions.Add("u");  //if not on the top row
-                //}
+                if (rpuzPos[0] != 0)
+                {
+                    directions.Add("u");  //if not on the top row
+                }
                 if (rpuzPos[0] != this.Height - 1)
                 {
                     directions.Add("d");  //if not on the bottom row

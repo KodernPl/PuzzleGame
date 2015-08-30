@@ -29,3 +29,5 @@ J:\PRG\cpp\vs_workspace\WPF\PuzzleGame\PuzzleGame\obj\Release\Menu\MainMenu.baml
 J:\PRG\cpp\vs_workspace\WPF\PuzzleGame\PuzzleGame\obj\Release\Menu\GameOver.g.cs
 J:\PRG\cpp\vs_workspace\WPF\PuzzleGame\PuzzleGame\obj\Release\Menu\Gameplay.g.cs
 J:\PRG\cpp\vs_workspace\WPF\PuzzleGame\PuzzleGame\obj\Release\Menu\MainMenu.g.cs
+J:\PRG\cpp\vs_workspace\WPF\PuzzleGame\PuzzleGame\obj\Release\Menu\TopScores.baml
+J:\PRG\cpp\vs_workspace\WPF\PuzzleGame\PuzzleGame\obj\Release\Menu\TopScores.g.cs

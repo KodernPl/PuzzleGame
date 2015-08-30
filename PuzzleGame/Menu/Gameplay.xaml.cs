@@ -23,17 +23,45 @@ namespace PuzzleGame
         Game game;
         string solution = "";
 
-        int INITIAL_GRID = 4;
-        int[] CANVAS_SIZE = new int[] { 250, 250 };
-        int tileSize;
+        int INITIAL_GRID = 5;
+        int initialHeight;
+        int initialWidth;
+        int[] CANVAS_SIZE = new int[] { 300, 300 };
+        int tileSizeWidth;
+        int tileSizeHeight;
 
         System.Windows.Threading.DispatcherTimer dispatcherTimer;
         System.Windows.Threading.DispatcherTimer timererek;
 
-        public Gameplay()
+        public Gameplay(int initialHeight, int initialWidth)
         {
             InitializeComponent();
+            this.initialHeight = initialHeight;
+            this.initialWidth = initialWidth;
+            tileSizeWidth = CANVAS_SIZE[0] / initialWidth;
+            tileSizeHeight = CANVAS_SIZE[1] / initialHeight;
+            canvas.Width = CANVAS_SIZE[0];
+            canvas.Height = CANVAS_SIZE[1];
+
+            //focus on button to enable keyhanling
+            buttonNewPuzzle.Focus();
+            
+            //new game
+            buttonNewPuzzle_Click(null, null);
+            
+            //speed of autosolver
+            dispatcherTimer = new System.Windows.Threading.DispatcherTimer();
+            dispatcherTimer.Tick += new EventHandler(dispatcherTimer_Tick);
+            dispatcherTimer.Interval = new TimeSpan(0, 0, 0, 0, 30);
+            dispatcherTimer.Start();
+            
+            //clock timer
+            timererek = new System.Windows.Threading.DispatcherTimer();
+            timererek.Tick += new EventHandler(timerek_Tick);
+            timererek.Interval = new TimeSpan(0, 0, 1);
+            timererek.Start();
         }
+
         #region ISwitchable Members
         public void UtilizeState(object state)
         {
@@ -42,13 +70,12 @@ namespace PuzzleGame
 
 
         #endregion
+
         /// <summary>
         /// Draws Puzzle
         /// </summary>
         public void DrawPuzzle()
         {
-            labelMoves.Content = "Moves: " + game.Moves;
-            labelTime.Content = "Time: " + game.Time;
             canvas.Children.Clear();
             SolidColorBrush background;
             for (int row = 0; row < game.Puzzle.Height; row++)
@@ -58,32 +85,33 @@ namespace PuzzleGame
                     int tileNum = game.Puzzle.GetNumber(row, col);
                     if (tileNum == 0)
                     {
-                        background = new SolidColorBrush(Color.FromRgb(128, 128, 255));
+                        background = new SolidColorBrush(Color.FromRgb(255, 128, 255));
                     }
                     else
                     {
-                        background = new SolidColorBrush(Colors.Blue);
+                        background = new SolidColorBrush(Color.FromRgb(255, 0, 255));
                     }
+                    background.Opacity = 0.4;
                     PointCollection myPointCollection = new PointCollection();
-                    myPointCollection.Add(new Point(col * tileSize, row * tileSize));
-                    myPointCollection.Add(new Point((col + 1) * tileSize, row * tileSize));
-                    myPointCollection.Add(new Point((col + 1) * tileSize, (row + 1) * tileSize));
-                    myPointCollection.Add(new Point(col * tileSize, (row + 1) * tileSize));
+                    myPointCollection.Add(new Point(col * tileSizeWidth, row * tileSizeHeight));
+                    myPointCollection.Add(new Point((col + 1) * tileSizeWidth, row * tileSizeHeight));
+                    myPointCollection.Add(new Point((col + 1) * tileSizeWidth, (row + 1) * tileSizeHeight));
+                    myPointCollection.Add(new Point(col * tileSizeWidth, (row + 1) * tileSizeHeight));
 
                     Polygon myPolygon = new Polygon();
                     myPolygon.Points = myPointCollection;
                     myPolygon.Fill = background;
                     myPolygon.Stroke = Brushes.White;
-                    myPolygon.StrokeThickness = 1;
+                    myPolygon.StrokeThickness = 2;
 
                     canvas.Children.Add(myPolygon);
 
                     TextBlock textBlock = new TextBlock();
                     textBlock.Text = tileNum.ToString();
-                    textBlock.Foreground = Brushes.White;
-                    textBlock.FontSize = tileSize * 0.66;
-                    Canvas.SetLeft(textBlock, (col + 0.1) * tileSize);
-                    Canvas.SetTop(textBlock, row * tileSize);
+                    textBlock.Foreground = Brushes.Black;
+                    textBlock.FontSize = ((tileSizeHeight+tileSizeWidth) /2.3) * 0.66;
+                    Canvas.SetLeft(textBlock, (col + 0.1) * tileSizeWidth);
+                    Canvas.SetTop(textBlock, row * tileSizeHeight);
 
                     canvas.Children.Add(textBlock);
                 }
@@ -131,6 +159,15 @@ namespace PuzzleGame
         /// 
         private void dispatcherTimer_Tick(object sender, EventArgs e)
         {
+            if (!game.IsSolved)
+            {
+                if (game.Puzzle.CheckSolvedAll())
+                {
+                    dispatcherTimer.Stop();
+                    timererek.Stop();
+                    Switcher.Switch(new GameOver(game.Moves, game.Time));
+                }
+            }
             if (solution == "") return;
             string direction = solution[0].ToString();
             solution = solution.Substring(1);
@@ -146,7 +183,7 @@ namespace PuzzleGame
             }
 
         }
-                /// <summary>
+        /// <summary>
         /// Update the timer
         /// </summary>
         /// <param name="sender"></param>
@@ -154,7 +191,6 @@ namespace PuzzleGame
         private void timerek_Tick(object sender, EventArgs e)
         {
             game.Time += 1;
-            labelTime.Content = "Time: " + game.Time;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -165,8 +201,15 @@ namespace PuzzleGame
         private void buttonNewPuzzle_Click(object sender, RoutedEventArgs e)
         {
             solution = "";
-            game = new Game(INITIAL_GRID, INITIAL_GRID);
+            game = new Game(initialHeight, initialWidth);
             DrawPuzzle();
+        }
+
+        private void btnMenu_Click(object sender, RoutedEventArgs e)
+        {
+            dispatcherTimer.Stop();
+            timererek.Stop();
+            Switcher.Switch(new MainMenu());
         }
     }
 }

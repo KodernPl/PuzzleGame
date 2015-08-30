@@ -4,8 +4,20 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" 
-              d:DesignHeight="350" d:DesignWidth="525">
+              d:DesignHeight="470" d:DesignWidth="450"
+            >
     <Grid>
-            
+        <Grid.Background>
+            <ImageBrush ImageSource="../Images/background.jpg"/>
+        </Grid.Background>
+        <Label HorizontalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" Height="201" Width="450" Margin="0,139,0,0" FontFamily="Showcard Gothic" FontSize="48" Foreground="#FF6A4E4E" Background="#FFF300FF" Opacity="0.3"/>
+        <Button Style="{DynamicResource RoundedButton}" x:Name="btnBack" Content="Menu" HorizontalAlignment="Left" VerticalAlignment="Top" Height="30" Width="135" Margin="155,357,0,0" Click="btnBack_Click" Background="#7FFF00FF" Foreground="White" FontFamily="Showcard Gothic" FontSize="16"/>
+        <Label HorizontalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" Height="70" Width="440" Margin="0,44,0,0" FontFamily="Showcard Gothic" FontSize="48" Foreground="#FF6A4E4E" Background="#FFF300FF" Opacity="0.3"/>
+        <Label Content="Winner" HorizontalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Showcard Gothic" FontSize="48" Foreground="White" Margin="0,44,0,0" Width="450"/>
+        <Label x:Name="labelName" Content="Anonymous" HorizontalContentAlignment="Left" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Showcard Gothic" FontSize="14" Foreground="White" Margin="39,139,0,0" Width="129" Height="27"/>
+        <Label x:Name="labelMoves" Content="Moves: 0" HorizontalContentAlignment="Left" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Showcard Gothic" FontSize="14" Foreground="White" Margin="211,139,0,0" Width="97" Height="27"/>
+        <Label x:Name="labelTime" Content="Time: 0s" HorizontalContentAlignment="Left" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Showcard Gothic" FontSize="14" Foreground="White" Margin="313,139,0,0" Width="127" Height="27" RenderTransformOrigin="0.648,0.667"/>
+        <Label x:Name="labelName_Copy" HorizontalContentAlignment="Center" Content="-----------------------------------------------------------------" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Showcard Gothic" FontSize="14" Foreground="White" Margin="0,147,0,0" Width="450" Height="27"/>
+
     </Grid>
 </UserControl>

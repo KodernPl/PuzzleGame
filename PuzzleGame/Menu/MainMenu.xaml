@@ -3,12 +3,38 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-       d:DesignHeight="350" d:DesignWidth="525"
+       d:DesignHeight="470" d:DesignWidth="450"
              mc:Ignorable="d"  
              >
+
     <Grid>
-        <Button x:Name="btnNewGame" Content="New Game" HorizontalAlignment="Left" VerticalAlignment="Top" Width="133" Margin="200,144,0,0" Click="btnNewGame_Click"/>
-        <Button x:Name="btnExit" Content="Exit" HorizontalAlignment="Left" VerticalAlignment="Top" Width="133" Margin="200,185,0,0" Click="btnExit_Click"/>
+        <Grid.Background>
+            <ImageBrush ImageSource="../Images/background.jpg"/>
+        </Grid.Background>
+
+        <Button Style="{DynamicResource RoundedButton}" x:Name="btnExit" Content="Exit" HorizontalAlignment="Left" VerticalAlignment="Top" Height="30" Width="135" Margin="155,357,0,0" Click="btnExit_Click" Background="#7FFF00FF" Foreground="White" FontFamily="Showcard Gothic" FontSize="16"/>
+        <Button Style="{DynamicResource RoundedButton}" x:Name="btnTopScores" Content="Top Scores" HorizontalAlignment="Left" VerticalAlignment="Top" Width="135
+                " Margin="155,322,0,0" Click="btnTopScores_Click" BorderThickness="0" Opacity="0.8" Foreground="White" Height="30" Background="#7FFF00FF" FontSize="16" FontFamily="Showcard Gothic"/>
+        <Button Style="{DynamicResource RoundedButton}" x:Name="btnNewGame_4x4" Content="4x4" HorizontalAlignment="Left" VerticalAlignment="Top" Height="37" Width="50" Margin="123,144,0,0" Click="btnNewGame_4x4_click" Background="#7FFF00FF" Foreground="White" FontFamily="Showcard Gothic" FontSize="16"/>
+        <Button Style="{DynamicResource RoundedButton}" x:Name="btnNewGame_5x4" Content="5x4" HorizontalAlignment="Left" VerticalAlignment="Top" Height="37" Width="50" Margin="173,144,0,0" Click="btnNewGame_5x4_click" Background="#7FFF00FF" Foreground="White" FontFamily="Showcard Gothic" FontSize="16"/>
+        <Button Style="{DynamicResource RoundedButton}" x:Name="btnNewGame_6x4" Content="6x4" HorizontalAlignment="Left" VerticalAlignment="Top" Height="37" Width="50" Margin="223,144,0,0" Click="btnNewGame_6x4_click" Background="#7FFF00FF" Foreground="White" FontFamily="Showcard Gothic" FontSize="16"/>
+        <Button Style="{DynamicResource RoundedButton}" x:Name="btnNewGame_4x5" Content="4x5" HorizontalAlignment="Left" VerticalAlignment="Top" Height="38" Width="50" Margin="123,181,0,0" Click="btnNewGame_4x5_click" Background="#7FFF00FF" Foreground="White" FontFamily="Showcard Gothic" FontSize="16"/>
+        <Button Style="{DynamicResource RoundedButton}" x:Name="btnNewGame_5x5" Content="5x5" HorizontalAlignment="Left" VerticalAlignment="Top" Height="38" Width="50" Margin="173,181,0,0" Click="btnNewGame_5x5_click" Background="#7FFF00FF" Foreground="White" FontFamily="Showcard Gothic" FontSize="16"/>
+        <Button Style="{DynamicResource RoundedButton}" x:Name="btnNewGame_6x5" Content="6x5" HorizontalAlignment="Left" VerticalAlignment="Top" Height="38" Width="50" Margin="223,181,0,0" Click="btnNewGame_6x5_click" Background="#7FFF00FF" Foreground="White" FontFamily="Showcard Gothic" FontSize="16"/>
+        <Button Style="{DynamicResource RoundedButton}" x:Name="btnNewGame_4x6" Content="4x6" HorizontalAlignment="Left" VerticalAlignment="Top" Height="37" Width="50" Margin="123,219,0,0" Click="btnNewGame_4x6_click" Background="#7FFF00FF" Foreground="White" FontFamily="Showcard Gothic" FontSize="16"/>
+        <Button Style="{DynamicResource RoundedButton}" x:Name="btnNewGame_5x6" Content="5x6" HorizontalAlignment="Left" VerticalAlignment="Top" Height="37" Width="50" Margin="173,219,0,0" Click="btnNewGame_5x6_click" Background="#7FFF00FF" Foreground="White" FontFamily="Showcard Gothic" FontSize="16"/>
+        <Button Style="{DynamicResource RoundedButton}" x:Name="btnNewGame_6x6" Content="6x6" HorizontalAlignment="Left" VerticalAlignment="Top" Height="37" Width="50" Margin="223,219,0,0" Click="btnNewGame_6x6_click" Background="#7FFF00FF" Foreground="White" FontFamily="Showcard Gothic" FontSize="16" RenderTransformOrigin="1.4,2.614"/>
+        <Button Style="{DynamicResource RoundedButton}" x:Name="btnNewGame_7x4" Content="7x4" HorizontalAlignment="Left" VerticalAlignment="Top" Height="37" Width="50" Margin="273,144,0,0" Click="btnNewGame_7x4_click" Background="#7FFF00FF" Foreground="White" FontFamily="Showcard Gothic" FontSize="16"/>
+        <Button Style="{DynamicResource RoundedButton}" x:Name="btnNewGame_7x5" Content="7x5" HorizontalAlignment="Left" VerticalAlignment="Top" Height="38" Width="50" Margin="273,181,0,0" Click="btnNewGame_7x5_click" Background="#7FFF00FF" Foreground="White" FontFamily="Showcard Gothic" FontSize="16"/>
+        <Button Style="{DynamicResource RoundedButton}" x:Name="btnNewGame_7x6" Content="7x6" HorizontalAlignment="Left" VerticalAlignment="Top" Height="37" Width="50" Margin="273,219,0,0" Click="btnNewGame_7x6_click" Background="#7FFF00FF" Foreground="White" FontFamily="Showcard Gothic" FontSize="16" RenderTransformOrigin="1.4,2.614"/>
+        <Button Style="{DynamicResource RoundedButton}" x:Name="btnNewGame_4x7" Content="4x7" HorizontalAlignment="Left" VerticalAlignment="Top" Height="37" Width="50" Margin="123,256,0,0" Click="btnNewGame_4x7_click" Background="#7FFF00FF" Foreground="White" FontFamily="Showcard Gothic" FontSize="16"/>
+        <Button Style="{DynamicResource RoundedButton}" x:Name="btnNewGame_5x7" Content="5x7" HorizontalAlignment="Left" VerticalAlignment="Top" Height="37" Width="50" Margin="173,256,0,0" Click="btnNewGame_5x7_click" Background="#7FFF00FF" Foreground="White" FontFamily="Showcard Gothic" FontSize="16"/>
+        <Button Style="{DynamicResource RoundedButton}" x:Name="btnNewGame_6x7" Content="6x7" HorizontalAlignment="Left" VerticalAlignment="Top" Height="37" Width="50" Margin="223,256,0,0" Click="btnNewGame_6x7_click" Background="#7FFF00FF" Foreground="White" FontFamily="Showcard Gothic" FontSize="16" RenderTransformOrigin="1.4,2.614"/>
+        <Button Style="{DynamicResource RoundedButton}" x:Name="btnNewGame_7x7" Content="7x7" HorizontalAlignment="Left" VerticalAlignment="Top" Height="37" Width="50" Margin="273,256,0,0" Click="btnNewGame_7x7_click" Background="#7FFF00FF" Foreground="White" FontFamily="Showcard Gothic" FontSize="16" RenderTransformOrigin="1.4,2.614"/>
+        <Label HorizontalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" Height="70" Width="440" Margin="0,44,0,0" FontFamily="Showcard Gothic" FontSize="48" Foreground="#FF6A4E4E" Background="#FFF300FF" Opacity="0.3">
+
+        </Label>
+        <Label Content="Puzzle Game" HorizontalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Showcard Gothic" FontSize="48" Foreground="White" Margin="0,44,0,0" Width="450"/>
 
     </Grid>
 </UserControl>

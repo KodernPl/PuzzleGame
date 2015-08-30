@@ -1,5 +1,12 @@
 ﻿<Window x:Class="PuzzleGame.PageSwitcher"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="PageSwitcher" Height="350" Width="525" >
+        Title="Puzzle Game" Height="470" Width="450" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" >
+    <Window.Background>
+        <ImageBrush ImageSource="/Images/background.jpg"/>
+    </Window.Background>
+
 </Window>
+
+
+

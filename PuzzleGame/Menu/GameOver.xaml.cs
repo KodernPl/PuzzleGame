@@ -12,6 +12,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using WPFPageSwitch;
+using WpfTutorialSamples.Dialogs;
 
 namespace PuzzleGame
 {
@@ -20,9 +21,17 @@ namespace PuzzleGame
     /// </summary>
     public partial class GameOver : UserControl, ISwitchable
     {
-        public GameOver()
+        public GameOver(int moves, int time)
         {
             InitializeComponent();
+            labelMoves.Content = "Moves: " + moves.ToString();
+            labelTime.Content = "Time: " + time.ToString() + "s";
+
+            InputDialogSample inputDialog = new InputDialogSample("Top Score!\nPlease enter your name:", "Anonymous");
+            if (inputDialog.ShowDialog() == true)
+                labelName.Content = inputDialog.Answer;
+
+
         }
         #region ISwitchable Members
         public void UtilizeState(object state)
@@ -31,5 +40,10 @@ namespace PuzzleGame
         }
 
         #endregion
+
+        private void btnBack_Click(object sender, RoutedEventArgs e)
+        {
+            Switcher.Switch(new MainMenu());
+        }
     }
 }
