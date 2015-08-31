@@ -10,5 +10,6 @@
 
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/background.jpg")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/button.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/icon.jpg")]
 
 

@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PuzzleGame
 {
@@ -18,6 +14,7 @@ namespace PuzzleGame
         int time;
         Puzzle puzzle;
         bool isSolved = false;
+        string gameName;
 
         #endregion private Fields
 
@@ -28,6 +25,11 @@ namespace PuzzleGame
         //  public Properties
         //
         //------------------------------------------------------
+
+        public string GameName
+        {
+            get { return gameName; }
+        }
 
         public bool IsSolved
         {
@@ -72,6 +74,7 @@ namespace PuzzleGame
             puzzle = new Puzzle(puzzleHeight, puzzleWidth, initialGrid);
             this.moves = 0;
             this.time = 0;
+            this.gameName = puzzleHeight.ToString() + puzzleWidth.ToString();
         }
         #endregion Constructors
 
@@ -81,6 +84,11 @@ namespace PuzzleGame
         //  Public Methods
         //
         //------------------------------------------------------
+        
+        /// <summary>
+        /// Update puzzle based on move string and add moves counter
+        /// </summary>
+        /// <param name="move"></param>
         public void MakeMove(string move)
         {
             try
@@ -90,15 +98,23 @@ namespace PuzzleGame
             }
             catch (Exception ex)
             {
-                // labelInfo.Content = ex.Message;
+                ;
             }
         }
 
+        /// <summary>
+        /// Update puzzle based on direction
+        /// </summary>
+        /// <param name="move"></param>
         public void UpdatePuzzle(string direction)
         {
             this.puzzle.UpdatePuzzle(direction);
         }
 
+        /// <summary>
+        /// Make solution string
+        /// </summary>
+        /// <returns></returns>
         public string MakeSolution()
         {
             string solution;

@@ -15,9 +15,7 @@ namespace PuzzleGame
         {
             InitializeComponent();
             Switcher.pageSwitcher = this;
-            Switcher.Switch(new GameOver(2,2));
-            //Switcher.Switch(new MainMenu());      
-            
+            Switcher.Switch(new MainMenu());      
         }
 
         public void Navigate(UserControl nextPage)

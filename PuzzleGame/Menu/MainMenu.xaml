@@ -14,7 +14,7 @@
 
         <Button Style="{DynamicResource RoundedButton}" x:Name="btnExit" Content="Exit" HorizontalAlignment="Left" VerticalAlignment="Top" Height="30" Width="135" Margin="155,357,0,0" Click="btnExit_Click" Background="#7FFF00FF" Foreground="White" FontFamily="Showcard Gothic" FontSize="16"/>
         <Button Style="{DynamicResource RoundedButton}" x:Name="btnTopScores" Content="Top Scores" HorizontalAlignment="Left" VerticalAlignment="Top" Width="135
-                " Margin="155,322,0,0" Click="btnTopScores_Click" BorderThickness="0" Opacity="0.8" Foreground="White" Height="30" Background="#7FFF00FF" FontSize="16" FontFamily="Showcard Gothic"/>
+                " Margin="155,322,0,0" Click="btnTopScores_Click" BorderThickness="0" Opacity="0.8" Foreground="White" Height="30" Background="#99FF00FF" FontSize="16" FontFamily="Showcard Gothic"/>
         <Button Style="{DynamicResource RoundedButton}" x:Name="btnNewGame_4x4" Content="4x4" HorizontalAlignment="Left" VerticalAlignment="Top" Height="37" Width="50" Margin="123,144,0,0" Click="btnNewGame_4x4_click" Background="#7FFF00FF" Foreground="White" FontFamily="Showcard Gothic" FontSize="16"/>
         <Button Style="{DynamicResource RoundedButton}" x:Name="btnNewGame_5x4" Content="5x4" HorizontalAlignment="Left" VerticalAlignment="Top" Height="37" Width="50" Margin="173,144,0,0" Click="btnNewGame_5x4_click" Background="#7FFF00FF" Foreground="White" FontFamily="Showcard Gothic" FontSize="16"/>
         <Button Style="{DynamicResource RoundedButton}" x:Name="btnNewGame_6x4" Content="6x4" HorizontalAlignment="Left" VerticalAlignment="Top" Height="37" Width="50" Margin="223,144,0,0" Click="btnNewGame_6x4_click" Background="#7FFF00FF" Foreground="White" FontFamily="Showcard Gothic" FontSize="16"/>

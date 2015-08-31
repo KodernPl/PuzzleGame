@@ -1,0 +1,51 @@
+﻿<UserControl x:Class="PuzzleGame.TopScoresTable"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+              d:DesignHeight="470" d:DesignWidth="450"
+            >
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="../Images/background.jpg"/>
+        </Grid.Background>
+        <Label HorizontalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" Height="129" Width="450" Margin="1,139,-1,0" FontFamily="Showcard Gothic" FontSize="48" Foreground="#FF6A4E4E" Background="#FFF300FF" Opacity="0.3"/>
+        <Button Style="{DynamicResource RoundedButton}" x:Name="btnBack" Content="Menu" HorizontalAlignment="Left" VerticalAlignment="Top" Height="30" Width="135" Margin="155,357,0,0" Click="btnBack_Click" Background="#7FFF00FF" Foreground="White" FontFamily="Showcard Gothic" FontSize="16"/>
+        <Label HorizontalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" Height="70" Width="440" Margin="0,44,0,0" FontFamily="Showcard Gothic" FontSize="48" Foreground="#FF6A4E4E" Background="#FFF300FF" Opacity="0.3"/>
+        <Label Content="TOP SCORES" HorizontalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Showcard Gothic" FontSize="48" Foreground="White" Margin="0,44,0,0" Width="450"/>
+        <Label x:Name="labelPlayerName" Content="Anonymous" HorizontalContentAlignment="Left" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Showcard Gothic" FontSize="14" Foreground="White" Margin="56,166,0,0" Width="108" Height="174">
+            <Label.Background>
+                <SolidColorBrush Color="Transparent" Opacity="0.9"/>
+            </Label.Background>
+        </Label>
+        <Label x:Name="labelMoves" Content="0" HorizontalContentAlignment="Left" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Showcard Gothic" FontSize="14" Foreground="White" Margin="222,166,0,0" Width="67" Height="174">
+            <Label.Background>
+                <SolidColorBrush Color="Transparent" Opacity="0.9"/>
+            </Label.Background>
+        </Label>
+        <Label x:Name="labelTime" Content="0" HorizontalContentAlignment="Left" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Showcard Gothic" FontSize="14" Foreground="White" Margin="289,166,0,0" Width="53" Height="174" RenderTransformOrigin="0.648,0.667">
+            <Label.Background>
+                <SolidColorBrush Color="Transparent" Opacity="0.9"/>
+            </Label.Background>
+        </Label>
+        <Label x:Name="labelDots" HorizontalContentAlignment="Center" Content="-----------------------------------------------------------------" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Showcard Gothic" FontSize="14" Foreground="White" Margin="0,147,0,0" Width="450" Height="27"/>
+        <Label x:Name="labelGameName" Content="4x4" HorizontalContentAlignment="Left" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Showcard Gothic" FontSize="14" Foreground="White" Margin="164,166,0,0" Width="53" Height="174">
+            <Label.Background>
+                <SolidColorBrush Color="Transparent" Opacity="0.9"/>
+            </Label.Background>
+        </Label>
+        <Label x:Name="labelScore" Content="0" HorizontalContentAlignment="Left" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Showcard Gothic" FontSize="14" Foreground="White" Margin="342,166,0,0" Width="78" Height="174" RenderTransformOrigin="0.648,0.667">
+            <Label.Background>
+                <SolidColorBrush Color="Transparent" Opacity="0.9"/>
+            </Label.Background>
+        </Label>
+        <Label x:Name="labelInfo1" Content="Player Name      Game       Moves       Time        Score " HorizontalContentAlignment="Left" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Showcard Gothic" FontSize="14" Foreground="White" Margin="55,139,0,0" Width="385" Height="27"/>
+        <Label x:Name="labelRank" Content="1" HorizontalContentAlignment="Left" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Showcard Gothic" FontSize="14" Foreground="White" Margin="36,166,0,0" Width="20" Height="174">
+            <Label.Background>
+                <SolidColorBrush Color="Transparent" Opacity="0.9"/>
+            </Label.Background>
+        </Label>
+
+    </Grid>
+</UserControl>

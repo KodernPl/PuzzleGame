@@ -1,16 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using WPFPageSwitch;
 
 namespace PuzzleGame
@@ -20,10 +10,19 @@ namespace PuzzleGame
     /// </summary>
     public partial class TopScores : UserControl, ISwitchable
     {
+        #region Constructor
+        //------------------------------------------------------
+        //
+        //  Constructor
+        //
+        //------------------------------------------------------
         public TopScores()
         {
             InitializeComponent();
         }
+
+        #endregion Constructor
+
         #region ISwitchable Members
         public void UtilizeState(object state)
         {
@@ -31,6 +30,13 @@ namespace PuzzleGame
         }
 
         #endregion
+
+        #region private Methods
+        //------------------------------------------------------
+        //
+        //  Private Methods
+        //
+        //------------------------------------------------------
 
         private void btnBack_Click(object sender, RoutedEventArgs e)
         {
@@ -41,85 +47,87 @@ namespace PuzzleGame
 
         private void btnTopScore_4x4_click(object sender, RoutedEventArgs e)
         {
-           
+            Switcher.Switch(new TopScoresTable(4,4));
         }
 
         private void btnTopScore_4x5_click(object sender, RoutedEventArgs e)
         {
-            
+            Switcher.Switch(new TopScoresTable(4, 5));
         }
 
         private void btnTopScore_4x6_click(object sender, RoutedEventArgs e)
         {
-           
+            Switcher.Switch(new TopScoresTable(4, 6));
         }
 
         private void btnTopScore_4x7_click(object sender, RoutedEventArgs e)
         {
-           
+            Switcher.Switch(new TopScoresTable(4, 7));
         }
 
         private void btnTopScore_5x4_click(object sender, RoutedEventArgs e)
         {
-          
+            Switcher.Switch(new TopScoresTable(5, 4));
         }
 
         private void btnTopScore_5x5_click(object sender, RoutedEventArgs e)
         {
-          
+            Switcher.Switch(new TopScoresTable(5, 5));
         }
 
         private void btnTopScore_5x6_click(object sender, RoutedEventArgs e)
         {
-         
+            Switcher.Switch(new TopScoresTable(5, 6));
         }
 
         private void btnTopScore_5x7_click(object sender, RoutedEventArgs e)
         {
-           
+            Switcher.Switch(new TopScoresTable(5, 7));
         }
 
         private void btnTopScore_6x4_click(object sender, RoutedEventArgs e)
         {
-            
+            Switcher.Switch(new TopScoresTable(6, 4));
         }
 
         private void btnTopScore_6x5_click(object sender, RoutedEventArgs e)
         {
-         
+            Switcher.Switch(new TopScoresTable(6, 5));
         }
 
         private void btnTopScore_6x6_click(object sender, RoutedEventArgs e)
         {
-          
+            Switcher.Switch(new TopScoresTable(6, 6));
         }
 
         private void btnTopScore_6x7_click(object sender, RoutedEventArgs e)
         {
-           
+            Switcher.Switch(new TopScoresTable(6, 7));
         }
 
         private void btnTopScore_7x4_click(object sender, RoutedEventArgs e)
         {
-          
+            Switcher.Switch(new TopScoresTable(7, 4));
         }
 
         private void btnTopScore_7x5_click(object sender, RoutedEventArgs e)
         {
-           
+            Switcher.Switch(new TopScoresTable(7, 5));
         }
 
         private void btnTopScore_7x6_click(object sender, RoutedEventArgs e)
         {
-          
+            Switcher.Switch(new TopScoresTable(7, 6));
         }
 
         private void btnTopScore_7x7_click(object sender, RoutedEventArgs e)
         {
-           
+            Switcher.Switch(new TopScoresTable(7, 7));
         }
         
         #endregion new game clicks 
+
+        #endregion private Methods
 
     }
 }

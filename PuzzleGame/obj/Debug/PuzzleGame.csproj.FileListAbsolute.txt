@@ -26,3 +26,8 @@ J:\PRG\cpp\vs_workspace\WPF\PuzzleGame\PuzzleGame\obj\Debug\App.baml
 J:\PRG\cpp\vs_workspace\WPF\PuzzleGame\PuzzleGame\obj\Debug\InputDialog.baml
 J:\PRG\cpp\vs_workspace\WPF\PuzzleGame\PuzzleGame\obj\Debug\InputDialog.g.cs
 J:\PRG\cpp\vs_workspace\WPF\PuzzleGame\PuzzleGame\obj\Debug\PuzzleGame.csprojResolveAssemblyReference.cache
+J:\PRG\cpp\vs_workspace\WPF\PuzzleGame\PuzzleGame\bin\Debug\System.Data.SQLite.dll
+J:\PRG\cpp\vs_workspace\WPF\PuzzleGame\PuzzleGame\bin\Debug\System.Data.SQLite.xml
+J:\PRG\cpp\vs_workspace\WPF\PuzzleGame\PuzzleGame\obj\Debug\Menu\TopScoresTable.baml
+J:\PRG\cpp\vs_workspace\WPF\PuzzleGame\PuzzleGame\obj\Debug\Menu\TopScoresTable.g.cs
+J:\PRG\cpp\vs_workspace\WPF\PuzzleGame\PuzzleGame\bin\Debug\Images\icon.jpg

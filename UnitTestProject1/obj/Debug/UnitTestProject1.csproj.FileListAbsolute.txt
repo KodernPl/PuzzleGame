@@ -7,3 +7,6 @@ J:\PRG\cpp\vs_workspace\WPF\PuzzleGame\UnitTestProject1\obj\Debug\UnitTestProjec
 J:\PRG\cpp\vs_workspace\WPF\PuzzleGame\UnitTestProject1\obj\Debug\UnitTestProject1.pdb
 J:\PRG\cpp\vs_workspace\WPF\PuzzleGame\UnitTestProject1\bin\Debug\Images\background.jpg
 J:\PRG\cpp\vs_workspace\WPF\PuzzleGame\UnitTestProject1\bin\Debug\Images\button.png
+J:\PRG\cpp\vs_workspace\WPF\PuzzleGame\UnitTestProject1\bin\Debug\System.Data.SQLite.dll
+J:\PRG\cpp\vs_workspace\WPF\PuzzleGame\UnitTestProject1\bin\Debug\System.Data.SQLite.xml
+J:\PRG\cpp\vs_workspace\WPF\PuzzleGame\UnitTestProject1\bin\Debug\Images\icon.jpg

@@ -9,12 +9,12 @@
              Focusable="True"
              >
     <Grid Margin="0,0,10,0">
-       
+
         <Canvas x:Name="canvas" Margin="68,69,72,101" Height="300"/>
         <Label x:Name="labelInfo" HorizontalAlignment="Left" VerticalAlignment="Top" Width="462" Margin="19,-1,0,0" Grid.ColumnSpan="2"/>
-        <Button x:Name="buttonSolve" Style="{DynamicResource RoundedButton}" Background="#66FF00FF" Foreground="White" FontFamily="Showcard Gothic" FontSize="16" Content="Solve" Margin="164,0,0,392" Click="Button_Click" Width="100" Height="34" VerticalAlignment="Bottom" HorizontalAlignment="Left"/>
-        <Button x:Name="buttonNewPuzzle" Style="{DynamicResource RoundedButton}" Background="#66FF00FF" Foreground="White" FontFamily="Showcard Gothic" FontSize="16" Content="New"  Margin="60,0,0,392"  Width="100" Click="buttonNewPuzzle_Click" Height="34" VerticalAlignment="Bottom" HorizontalAlignment="Left"/>
-        <Button x:Name="btnMenu" Style="{DynamicResource RoundedButton}" Background="#66FF00FF" Foreground="White" FontFamily="Showcard Gothic" FontSize="16" Content="Menu"  Width="100" Height="34" Margin="268,0,0,392" Click="btnMenu_Click" VerticalAlignment="Bottom" HorizontalAlignment="Left"/>
+        <Button x:Name="buttonSolve" Style="{DynamicResource RoundedButton}" Background="#66FF00FF" Foreground="White" FontFamily="Showcard Gothic" FontSize="16" Content="Solve" Margin="170,0,0,392" Click="Button_Click" Width="94" Height="34" VerticalAlignment="Bottom" HorizontalAlignment="Left"/>
+        <Button x:Name="buttonNewPuzzle" Style="{DynamicResource RoundedButton}" Background="#66FF00FF" Foreground="White" FontFamily="Showcard Gothic" FontSize="16" Content="New"  Margin="68,0,0,392"  Width="97" Click="buttonNewPuzzle_Click" Height="34" VerticalAlignment="Bottom" HorizontalAlignment="Left"/>
+        <Button x:Name="btnMenu" Style="{DynamicResource RoundedButton}" Background="#66FF00FF" Foreground="White" FontFamily="Showcard Gothic" FontSize="16" Content="Menu"  Width="99" Height="34" Margin="269,0,0,392" Click="btnMenu_Click" VerticalAlignment="Bottom" HorizontalAlignment="Left"/>
         <Label HorizontalContentAlignment="Center" Content="Use keyboard arrows to move" Margin="0,389,0,0" Background="#33000000" Foreground="White" FontSize="16" Height="31" VerticalAlignment="Bottom"/>
 
     </Grid>

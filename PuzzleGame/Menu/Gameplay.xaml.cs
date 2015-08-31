@@ -1,15 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 using WPFPageSwitch;
 
@@ -20,10 +13,15 @@ namespace PuzzleGame
     /// </summary>
     public partial class Gameplay : UserControl, ISwitchable
     {
+        #region private Fields
+        //------------------------------------------------------
+        //
+        //  private Fields
+        //
+        //------------------------------------------------------
+
         Game game;
         string solution = "";
-
-        int INITIAL_GRID = 5;
         int initialHeight;
         int initialWidth;
         int[] CANVAS_SIZE = new int[] { 300, 300 };
@@ -33,6 +31,14 @@ namespace PuzzleGame
         System.Windows.Threading.DispatcherTimer dispatcherTimer;
         System.Windows.Threading.DispatcherTimer timererek;
 
+        #endregion private Fields
+
+        #region Constructor
+        //------------------------------------------------------
+        //
+        //  Constructor
+        //
+        //------------------------------------------------------
         public Gameplay(int initialHeight, int initialWidth)
         {
             InitializeComponent();
@@ -62,6 +68,8 @@ namespace PuzzleGame
             timererek.Start();
         }
 
+        #endregion Constructor
+
         #region ISwitchable Members
         public void UtilizeState(object state)
         {
@@ -70,6 +78,13 @@ namespace PuzzleGame
 
 
         #endregion
+
+        #region Public Methods
+        //------------------------------------------------------
+        //
+        //  Public Methods
+        //
+        //------------------------------------------------------
 
         /// <summary>
         /// Draws Puzzle
@@ -119,6 +134,15 @@ namespace PuzzleGame
 
         }
 
+        #endregion Public Methods
+
+        #region private Methods
+        //------------------------------------------------------
+        //
+        //  Private Methods
+        //
+        //------------------------------------------------------
+
         /// <summary>
         /// Keydown handler that allows updates of puzzle using arrow keys
         /// </summary>
@@ -165,7 +189,7 @@ namespace PuzzleGame
                 {
                     dispatcherTimer.Stop();
                     timererek.Stop();
-                    Switcher.Switch(new GameOver(game.Moves, game.Time));
+                    Switcher.Switch(new GameOver(game.Moves, game.Time, game.GameName));
                 }
             }
             if (solution == "") return;
@@ -183,6 +207,7 @@ namespace PuzzleGame
             }
 
         }
+
         /// <summary>
         /// Update the timer
         /// </summary>
@@ -193,11 +218,21 @@ namespace PuzzleGame
             game.Time += 1;
         }
 
+        /// <summary>
+        /// Make Solution Button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             solution = game.MakeSolution();
         }
 
+        /// <summary>
+        /// New Game Button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void buttonNewPuzzle_Click(object sender, RoutedEventArgs e)
         {
             solution = "";
@@ -205,11 +240,18 @@ namespace PuzzleGame
             DrawPuzzle();
         }
 
+        /// <summary>
+        /// Stop Game and go to Menu
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnMenu_Click(object sender, RoutedEventArgs e)
         {
             dispatcherTimer.Stop();
             timererek.Stop();
             Switcher.Switch(new MainMenu());
         }
+
+        #endregion Private Methods
     }
 }

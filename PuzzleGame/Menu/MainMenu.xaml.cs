@@ -1,17 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using WPFPageSwitch;
+using Databases;
 
 namespace PuzzleGame
 {
@@ -20,10 +11,29 @@ namespace PuzzleGame
     /// </summary>
     public partial class MainMenu : UserControl, ISwitchable
     {
+        #region Constructor
+        //------------------------------------------------------
+        //
+        //  Constructor
+        //
+        //------------------------------------------------------
         public MainMenu()
         {
             InitializeComponent();
+            Database.DatabaseCreateTables();
+
+            //create sample data
+            //Database.DatabaseInsertData("44", "ano", 20, 22);
+            //Database.DatabaseInsertData("44", "anol", 80, 122);
+            //Database.DatabaseInsertData("44", "anoll", 10, 24);
+            //Database.DatabaseInsertData("44", "anoff", 40, 32);
+            //Database.DatabaseInsertData("44", "anofd", 50, 82);
+            //Database.DatabaseInsertData("44", "anoss", 110, 2);
+            //Database.DatabaseInsertData("44", "anosd", 14, 232);
         }
+
+        #endregion Constructor
+
         #region ISwitchable Members
         public void UtilizeState(object state)
         {
@@ -31,6 +41,13 @@ namespace PuzzleGame
         }
 
         #endregion
+
+        #region private Methods
+        //------------------------------------------------------
+        //
+        //  Private Methods
+        //
+        //------------------------------------------------------
 
         private void btnExit_Click(object sender, RoutedEventArgs e)
         {
@@ -121,10 +138,11 @@ namespace PuzzleGame
         
         #endregion new game clicks 
 
-
         private void btnTopScores_Click(object sender, RoutedEventArgs e)
         {
             Switcher.Switch(new TopScores());
         }
+
+        #endregion Private Methods
     }
 }
