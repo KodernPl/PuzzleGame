@@ -58,7 +58,7 @@ namespace PuzzleGame
             //speed of autosolver
             dispatcherTimer = new System.Windows.Threading.DispatcherTimer();
             dispatcherTimer.Tick += new EventHandler(dispatcherTimer_Tick);
-            dispatcherTimer.Interval = new TimeSpan(0, 0, 0, 0, 30);
+            dispatcherTimer.Interval = new TimeSpan(0, 0, 0, 0, 400);
             dispatcherTimer.Start();
             
             //clock timer
