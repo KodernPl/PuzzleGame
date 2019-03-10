@@ -9,5 +9,5 @@ Features:
 - Many game modes
 - Autosolver
 - Top scores for every game in password protected db SQLite  
-- UserName from Windows Acount
+- UserName from Windows Account
 
